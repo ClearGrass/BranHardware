@@ -17,7 +17,7 @@
       (Path "Design Resources" ".\r8-dev-v1.0-20151028.dsn")
       (Path "Design Resources" ".\r8-dev-v1.0-20151028.dsn" "R8-DEV-V1.0")
       (Select "Design Resources" ".\r8-dev-v1.0-20151028.dsn" "R8-DEV-V1.0"
-         "02 CPU"))
+         "05 NAND/CARD/LCD TP/CAMERA"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -39,8 +39,8 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 75 1783 75 544")
-        (Scroll "0 886")
-        (Zoom "200")
+        (Scroll "0 1873")
+        (Zoom "216")
         (Occurrence "/"))
       (Path
          "D:\青萍科技\BRAN\硬件部分\电子\BRANHARDWARE\DEBUG-PINBOARD\参考资料\R8-DEV-V1.0-20151028.DSN")
@@ -72,8 +72,8 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -30 150 1858 150 619")
-        (Scroll "-417 0")
-        (Zoom "50")
+        (Scroll "-202 432")
+        (Zoom "76")
         (Occurrence "/"))
       (Path
          "D:\青萍科技\BRAN\硬件部分\电子\BRANHARDWARE\DEBUG-PINBOARD\参考资料\R8-DEV-V1.0-20151028.DSN")
@@ -83,8 +83,8 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 2 3 -1 -1 -8 -30 175 1883 175 644")
-        (Scroll "-310 445")
-        (Zoom "76")
+        (Scroll "-45 485")
+        (Zoom "108")
         (Occurrence "/"))
       (Path
          "D:\青萍科技\BRAN\硬件部分\电子\BRANHARDWARE\DEBUG-PINBOARD\参考资料\R8-DEV-V1.0-20151028.DSN")
