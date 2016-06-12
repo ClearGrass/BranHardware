@@ -110,6 +110,18 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 
+[GeneratedDocument1]
+DocumentPath=Project Outputs for Bran PinBoard\LCD_RGB.NET
+DItemRevisionGUID=
+
+[GeneratedDocument2]
+DocumentPath=pin board.PcbDoc.htm
+DItemRevisionGUID=
+
+[GeneratedDocument3]
+DocumentPath=Project Outputs for Bran PinBoard\Sensor.NET
+DItemRevisionGUID=
+
 [PCBConfiguration1]
 ReleaseItemId=
 CurrentRevision=
@@ -192,6 +204,8 @@ OutputName14=Protel
 OutputDocumentPath14=
 OutputVariantName14=
 OutputDefault14=0
+Configuration14_Name1=OutputConfigurationParameter1
+Configuration14_Item1=NetlistVersion=0|Record=ProtelNetlistView
 OutputType15=RacalNetlist
 OutputName15=Racal Netlist
 OutputDocumentPath15=
