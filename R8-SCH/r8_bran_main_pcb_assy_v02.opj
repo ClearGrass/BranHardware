@@ -19,7 +19,7 @@
       (Path "Design Resources" ".\r8_bran_main_pcb_assy_v02.dsn"
          "R8-REFERENCE-DESIGN")
       (Select "Design Resources" ".\r8_bran_main_pcb_assy_v02.dsn"
-         "R8-REFERENCE-DESIGN" "02 CPU"))
+         "R8-REFERENCE-DESIGN" "03 POWER"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -30,55 +30,11 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 2 3 -1 -1 -8 -30 50 1488 50 389")
-        (Scroll "780 0")
-        (Zoom "200")
+        (Scroll "2776 748")
+        (Zoom "400")
         (Occurrence "/"))
       (Path
          "D:\青萍科技\BRAN\硬件部分\电子\BRANHARDWARE\R8-SCH\R8_BRAN_MAIN_PCB_ASSY_V02.DSN")
       (Schematic "R8-REFERENCE-DESIGN")
-      (Page "02 CPU"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 75 1513 75 414")
-        (Scroll "0 422")
-        (Zoom "200")
-        (Occurrence "/"))
-      (Path
-         "D:\青萍科技\BRAN\硬件部分\电子\BRANHARDWARE\R8-SCH\R8_BRAN_MAIN_PCB_ASSY_V02.DSN")
-      (Schematic "R8-REFERENCE-DESIGN")
-      (Page "03 POWER"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 125 1563 125 464")
-        (Scroll "0 395")
-        (Zoom "100")
-        (Occurrence "/"))
-      (Path
-         "D:\青萍科技\BRAN\硬件部分\电子\BRANHARDWARE\R8-SCH\R8_BRAN_MAIN_PCB_ASSY_V02.DSN")
-      (Schematic "R8-REFERENCE-DESIGN")
-      (Page "09 Wi-Fi"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 50 1488 50 389")
-        (Scroll "0 0")
-        (Zoom "100")
-        (Occurrence "/"))
-      (Path
-         "D:\青萍科技\BRAN\硬件部分\电子\BRANHARDWARE\R8-SCH\R8_BRAN_MAIN_PCB_ASSY_V02.DSN")
-      (Schematic "R8-REFERENCE-DESIGN")
-      (Page "05 FLASH"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 75 1513 75 414")
-        (Scroll "-210 0")
-        (Zoom "100")
-        (Occurrence "/"))
-      (Path
-         "D:\青萍科技\BRAN\硬件部分\电子\BRANHARDWARE\R8-SCH\R8_BRAN_MAIN_PCB_ASSY_V02.DSN")
-      (Schematic "R8-REFERENCE-DESIGN")
-      (Page "08 Sensor")))
+      (Page "03 POWER")))
   (MPSSessionName "t450"))
