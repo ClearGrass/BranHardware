@@ -24,72 +24,61 @@
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -30 0 200 0 427"))
+        (Placement "44 0 1 -1 -1 -8 -30 0 200 0 427"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 50 1758 50 519")
-        (Scroll "0 26")
-        (Zoom "108")
+        (Placement "44 2 3 -1 -1 -8 -30 50 1488 50 389")
+        (Scroll "780 0")
+        (Zoom "200")
         (Occurrence "/"))
       (Path
-         "D:\青萍科技\BRAN\硬件部分\电子\V2 设计文件\07 MAIN_ASSY PCB（全志R8）\BRANHARDWARE-MASTER 0613V3\R8_BRAN_MAIN_PCB_ASSY_V02.DSN")
+         "D:\青萍科技\BRAN\硬件部分\电子\BRANHARDWARE\R8-SCH\R8_BRAN_MAIN_PCB_ASSY_V02.DSN")
       (Schematic "R8-REFERENCE-DESIGN")
       (Page "02 CPU"))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 75 1783 75 544")
-        (Scroll "-345 0")
-        (Zoom "100")
-        (Occurrence "/"))
-      (Path
-         "D:\青萍科技\BRAN\硬件部分\电子\V2 设计文件\07 MAIN_ASSY PCB（全志R8）\BRANHARDWARE-MASTER 0613V3\R8_BRAN_MAIN_PCB_ASSY_V02.DSN")
-      (Schematic "R8-REFERENCE-DESIGN")
-      (Page "10 BLE"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 100 1808 100 569")
-        (Scroll "0 467")
-        (Zoom "108")
-        (Occurrence "/"))
-      (Path
-         "D:\青萍科技\BRAN\硬件部分\电子\V2 设计文件\07 MAIN_ASSY PCB（全志R8）\BRANHARDWARE-MASTER 0613V3\R8_BRAN_MAIN_PCB_ASSY_V02.DSN")
-      (Schematic "R8-REFERENCE-DESIGN")
-      (Page "07 Peripherals"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 125 1833 125 594")
-        (Scroll "-70 0")
-        (Zoom "100")
-        (Occurrence "/"))
-      (Path
-         "D:\青萍科技\BRAN\硬件部分\电子\V2 设计文件\07 MAIN_ASSY PCB（全志R8）\BRANHARDWARE-MASTER 0613V3\R8_BRAN_MAIN_PCB_ASSY_V02.DSN")
-      (Schematic "R8-REFERENCE-DESIGN")
-      (Page "09 Wi-Fi"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 150 1858 150 619")
-        (Scroll "0 1378")
+        (Placement "44 0 1 -1 -1 -8 -30 75 1513 75 414")
+        (Scroll "0 422")
         (Zoom "200")
         (Occurrence "/"))
       (Path
-         "D:\青萍科技\BRAN\硬件部分\电子\V2 设计文件\07 MAIN_ASSY PCB（全志R8）\BRANHARDWARE-MASTER 0613V3\R8_BRAN_MAIN_PCB_ASSY_V02.DSN")
+         "D:\青萍科技\BRAN\硬件部分\电子\BRANHARDWARE\R8-SCH\R8_BRAN_MAIN_PCB_ASSY_V02.DSN")
       (Schematic "R8-REFERENCE-DESIGN")
       (Page "03 POWER"))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -30 200 1908 200 669")
-        (Scroll "0 280")
-        (Zoom "200")
+        (Placement "44 0 1 -1 -1 -8 -30 125 1563 125 464")
+        (Scroll "0 395")
+        (Zoom "100")
         (Occurrence "/"))
       (Path
-         "D:\青萍科技\BRAN\硬件部分\电子\V2 设计文件\07 MAIN_ASSY PCB（全志R8）\BRANHARDWARE-MASTER 0613V3\R8_BRAN_MAIN_PCB_ASSY_V02.DSN")
+         "D:\青萍科技\BRAN\硬件部分\电子\BRANHARDWARE\R8-SCH\R8_BRAN_MAIN_PCB_ASSY_V02.DSN")
       (Schematic "R8-REFERENCE-DESIGN")
-      (Page "05 FLASH")))
+      (Page "09 Wi-Fi"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 50 1488 50 389")
+        (Scroll "0 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path
+         "D:\青萍科技\BRAN\硬件部分\电子\BRANHARDWARE\R8-SCH\R8_BRAN_MAIN_PCB_ASSY_V02.DSN")
+      (Schematic "R8-REFERENCE-DESIGN")
+      (Page "05 FLASH"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -30 75 1513 75 414")
+        (Scroll "-210 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path
+         "D:\青萍科技\BRAN\硬件部分\电子\BRANHARDWARE\R8-SCH\R8_BRAN_MAIN_PCB_ASSY_V02.DSN")
+      (Schematic "R8-REFERENCE-DESIGN")
+      (Page "08 Sensor")))
   (MPSSessionName "t450"))
