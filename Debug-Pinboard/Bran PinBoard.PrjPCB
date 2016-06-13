@@ -111,15 +111,11 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 
 [GeneratedDocument1]
-DocumentPath=Project Outputs for Bran PinBoard\LCD_RGB.NET
+DocumentPath=Project Outputs for Bran PinBoard\Design Rule Check - pin board.html
 DItemRevisionGUID=
 
 [GeneratedDocument2]
 DocumentPath=pin board.PcbDoc.htm
-DItemRevisionGUID=
-
-[GeneratedDocument3]
-DocumentPath=Project Outputs for Bran PinBoard\Sensor.NET
 DItemRevisionGUID=
 
 [PCBConfiguration1]
