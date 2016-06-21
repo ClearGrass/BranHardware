@@ -1,0 +1,79 @@
+Protel Design System Design Rule Check
+PCB File : D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\制板\Bran-PinBoard-20160618\pin board.PcbDoc
+Date     : 2016/6/18
+Time     : 12:26:24
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+   Violation between Short-Circuit Constraint: Between Region (0 hole(s)) Top Layer And Pad U3-2(50.117mm,-41.309mm) on Top Layer Location : [X = 88.09mm][Y = 83.151mm]
+   Violation between Short-Circuit Constraint: Between Region (0 hole(s)) Top Layer And Pad U3-2(50.117mm,-42.009mm) on Top Layer Location : [X = 88.09mm][Y = 82.475mm]
+   Violation between Short-Circuit Constraint: Between Region (0 hole(s)) Top Layer And Track (50.117mm,-42.508mm)(50.117mm,-42.009mm) on Top Layer Location : [X = 88.09mm][Y = 82.453mm]
+   Violation between Short-Circuit Constraint: Between Region (0 hole(s)) Top Layer And Track (50.117mm,-42.009mm)(50.117mm,-41.309mm) on Top Layer Location : [X = 88.09mm][Y = 82.803mm]
+Rule Violations :4
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.203mm) (All),(All)
+   Violation between Clearance Constraint: (0.13mm < 0.203mm) Between Pad U6-5(59.689mm,-40.64mm) on Top Layer And Pad U6-7(60.579mm,-40.64mm) on Top Layer 
+   Violation between Clearance Constraint: (0.13mm < 0.203mm) Between Pad U6-4(59.689mm,-39.99mm) on Top Layer And Pad U6-7(60.579mm,-40.64mm) on Top Layer 
+   Violation between Clearance Constraint: (0.13mm < 0.203mm) Between Pad U6-3(61.469mm,-39.99mm) on Top Layer And Pad U6-7(60.579mm,-40.64mm) on Top Layer 
+   Violation between Clearance Constraint: (0.13mm < 0.203mm) Between Pad U6-6(59.689mm,-41.29mm) on Top Layer And Pad U6-7(60.579mm,-40.64mm) on Top Layer 
+   Violation between Clearance Constraint: (0.13mm < 0.203mm) Between Pad U6-1(61.469mm,-41.29mm) on Top Layer And Pad U6-7(60.579mm,-40.64mm) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 0.203mm) Between Region (0 hole(s)) Top Layer And Pad U3-2(50.117mm,-41.309mm) on Top Layer 
+   Violation between Clearance Constraint: (0.045mm < 0.203mm) Between Region (0 hole(s)) Top Layer And Pad U3-2(50.117mm,-42.009mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J6-2(80.675mm,-3.75mm) on Top Layer And Pad J6-1(80.675mm,-4.25mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J6-3(80.675mm,-3.25mm) on Top Layer And Pad J6-2(80.675mm,-3.75mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J6-5(80.675mm,-2.25mm) on Top Layer And Pad J6-6(80.675mm,-1.75mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J6-4(80.675mm,-2.75mm) on Top Layer And Pad J6-5(80.675mm,-2.25mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J6-3(80.675mm,-3.25mm) on Top Layer And Pad J6-4(80.675mm,-2.75mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-2(11.43mm,-2.532mm) on Top Layer And Pad J5-1(11.43mm,-2.032mm) on Top Layer 
+   Violation between Clearance Constraint: (0.198mm < 0.203mm) Between Track (11.43mm,-2.532mm)(13.835mm,-2.532mm) on Top Layer And Pad J5-1(11.43mm,-2.032mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-3(11.43mm,-3.032mm) on Top Layer And Pad J5-2(11.43mm,-2.532mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-4(11.43mm,-3.532mm) on Top Layer And Pad J5-3(11.43mm,-3.032mm) on Top Layer 
+   Violation between Clearance Constraint: (0.198mm < 0.203mm) Between Track (11.43mm,-2.532mm)(13.835mm,-2.532mm) on Top Layer And Pad J5-3(11.43mm,-3.032mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-4(11.43mm,-3.532mm) on Top Layer And Pad J5-5(11.43mm,-4.032mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-8(11.43mm,-5.532mm) on Top Layer And Pad J5-9(11.43mm,-6.032mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-10(11.43mm,-6.532mm) on Top Layer And Pad J5-9(11.43mm,-6.032mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-11(11.43mm,-7.032mm) on Top Layer And Pad J5-10(11.43mm,-6.532mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-7(11.43mm,-5.032mm) on Top Layer And Pad J5-8(11.43mm,-5.532mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-6(11.43mm,-4.532mm) on Top Layer And Pad J5-7(11.43mm,-5.032mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-15(11.43mm,-9.032mm) on Top Layer And Pad J5-14(11.43mm,-8.532mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-16(11.43mm,-9.532mm) on Top Layer And Pad J5-15(11.43mm,-9.032mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-12(11.43mm,-7.532mm) on Top Layer And Pad J5-13(11.43mm,-8.032mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-11(11.43mm,-7.032mm) on Top Layer And Pad J5-12(11.43mm,-7.532mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-20(11.43mm,-11.532mm) on Top Layer And Pad J5-19(11.43mm,-11.032mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-18(11.43mm,-10.532mm) on Top Layer And Pad J5-19(11.43mm,-11.032mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-21(11.43mm,-12.032mm) on Top Layer And Pad J5-20(11.43mm,-11.532mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-17(11.43mm,-10.032mm) on Top Layer And Pad J5-18(11.43mm,-10.532mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-16(11.43mm,-9.532mm) on Top Layer And Pad J5-17(11.43mm,-10.032mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-23(11.43mm,-13.032mm) on Top Layer And Pad J5-24(11.43mm,-13.532mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-25(11.43mm,-14.032mm) on Top Layer And Pad J5-24(11.43mm,-13.532mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-26(11.43mm,-14.532mm) on Top Layer And Pad J5-25(11.43mm,-14.032mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-22(11.43mm,-12.532mm) on Top Layer And Pad J5-23(11.43mm,-13.032mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-27(11.43mm,-15.032mm) on Top Layer And Pad J5-26(11.43mm,-14.532mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-28(11.43mm,-15.532mm) on Top Layer And Pad J5-27(11.43mm,-15.032mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-29(11.43mm,-16.032mm) on Top Layer And Pad J5-28(11.43mm,-15.532mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-31(11.43mm,-17.032mm) on Top Layer And Pad J5-30(11.43mm,-16.532mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-29(11.43mm,-16.032mm) on Top Layer And Pad J5-30(11.43mm,-16.532mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-32(11.43mm,-17.532mm) on Top Layer And Pad J5-31(11.43mm,-17.032mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-33(11.43mm,-18.032mm) on Top Layer And Pad J5-32(11.43mm,-17.532mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-34(11.43mm,-18.532mm) on Top Layer And Pad J5-33(11.43mm,-18.032mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-36(11.43mm,-19.532mm) on Top Layer And Pad J5-35(11.43mm,-19.032mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-34(11.43mm,-18.532mm) on Top Layer And Pad J5-35(11.43mm,-19.032mm) on Top Layer 
+   Violation between Clearance Constraint: (0.2mm < 0.203mm) Between Pad J5-37(11.43mm,-20.032mm) on Top Layer And Pad J5-36(11.43mm,-19.532mm) on Top Layer 
+   Violation between Clearance Constraint: (0.093mm < 0.203mm) Between Region (0 hole(s)) Top Layer And Track (50.117mm,-42.508mm)(50.117mm,-42.009mm) on Top Layer 
+   Violation between Clearance Constraint: (Collision < 0.203mm) Between Region (0 hole(s)) Top Layer And Track (50.117mm,-42.009mm)(50.117mm,-41.309mm) on Top Layer 
+Rule Violations :49
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.203mm) (Max=1.27mm) (Preferred=0.254mm) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+
+Violations Detected : 53
+Time Elapsed        : 00:00:00
