@@ -1,0 +1,35 @@
+*************************************************************
+FileName = Bran_Main_Assay_PCB_v1.GBR
+AutoAperture = True
+*************************************************************
+Generating : Drill Drawing
+      File : Bran_Main_Assay_PCB_v1.GD1
+
+    Adding Layer      : Mechanical 1
+
+    Adding Drill Pair : TOP-BOTTOM
+
+    Adding Layer      : Drill Drawing
+
+
+Used DCodes :
+    D10
+    D11
+    D12
+*************************************************************
+
+*************************************************************
+Generating : Drill Guide
+      File : Bran_Main_Assay_PCB_v1.GG1
+
+    Adding Layer      : Mechanical 1
+
+    Adding Drill Pair : TOP-BOTTOM
+
+    Adding Layer      : Drill Guide
+
+
+Used DCodes :
+    D10
+*************************************************************
+

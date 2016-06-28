@@ -1,0 +1,14 @@
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [pcb_power_as.PrjPCB]
+   Generated File[pcb_power_ass.GD1]
+   Generated File[pcb_power_ass.GG1]
+   Generated File[pcb_power_ass.RUL]
+   Generated File[pcb_power_ass.EXTREP]
+   Generated File[pcb_power_ass.REP]
+
+
+Files Generated   : 5
+Documents Printed : 0
+
+Finished Output Generation At 21:50:55 On 2016/6/26

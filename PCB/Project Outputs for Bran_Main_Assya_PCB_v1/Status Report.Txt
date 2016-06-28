@@ -1,0 +1,11 @@
+Output: Generates pick and place files
+Type  : Pick Place
+From  : Variant [[No Variations]] of Project [Bran_Main_Assya_PCB_v1.PrjPCB]
+   Generated File[Pick Place for Bran_Main_Assay_PCB_v1.txt]
+   Generated File[Pick Place for Bran_Main_Assay_PCB_v1.csv]
+
+
+Files Generated   : 2
+Documents Printed : 0
+
+Finished Output Generation At 12:19:09 On 2016/6/27

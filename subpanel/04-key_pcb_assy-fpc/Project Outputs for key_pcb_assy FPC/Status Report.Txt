@@ -1,0 +1,14 @@
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [key_pcb_assy FPC.PrjPCB]
+   Generated File[key_pcb_assy FPC.GD1]
+   Generated File[key_pcb_assy FPC.GG1]
+   Generated File[key_pcb_assy FPC.RUL]
+   Generated File[key_pcb_assy FPC.EXTREP]
+   Generated File[key_pcb_assy FPC.REP]
+
+
+Files Generated   : 5
+Documents Printed : 0
+
+Finished Output Generation At 22:27:42 On 2016/6/26

@@ -1,0 +1,62 @@
+(ExpressProject ""
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (File ".\r8_bran_main_pcb_assy.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (BOM_Scope "0")
+    (BOM_Mode "0")
+    (BOM_Report_File
+       "D:\青萍科技\BRAN\硬件部分\电子\BRANHARDWARE\R8-SCH\R8_BRAN_MAIN_PCB_ASSY_V02 .BOM")
+    (BOM_Merge_Include "FALSE")
+    (BOM_Property_Combine_7.0 "{Item}\t{Quantity}\t{Reference}\t{Value}")
+    (BOM_Header "Item\tQuantity\tReference\tPart")
+    (BOM_Include_File
+       "D:\青萍科技\BRAN\硬件部分\电子\BRANHARDWARE\R8-SCH\R8_BRAN_MAIN_PCB_ASSY_V02 .INC")
+    (BOM_Include_File_Combine_7.0 "{Item}\t{Quantity}\t{Reference}\t{Value}")
+    (BOM_One_Part_Per_Line "TRUE")
+    (Open_BOM_in_Excel "TRUE")
+    (BOM_View_Output "FALSE")
+    (NoModify)
+    (Netlist_TAB "8")
+    (OTHER_Part_Value "{Value}")
+    (OTHER_Netlist_File "bran.NET")
+    (OTHER_Netlist_File2 "R8_BRAN_MAIN_PCB_ASSY_V02 .CMP")
+    (OTHER_View_Output "FALSE")
+    (OTHER_View_Output2 "FALSE")
+    (OTHER_Formatter "orprotel2.dll")
+    (OTHER_PCB_Footprint "{PCB Footprint}")
+    (OTHER_Switch0 "FALSE")
+    (OTHER_Switch1 "FALSE")
+    (OTHER_Switch2 "FALSE")
+    (OTHER_Switch3 "FALSE")
+    (OTHER_Switch4 "FALSE")
+    (OTHER_Switch5 "FALSE")
+    (OTHER_Switch6 "FALSE"))
+  (Folder "Outputs"
+    (File ".\r8_bran_main_pcb_assy_v02 .bom"
+      (Type "Report"))
+    (File ".\bran.net"
+      (Type "Report")))
+  (Folder "Referenced Projects")
+  (PartMRUSelector)
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" ".\r8_bran_main_pcb_assy.dsn")
+      (Path "Design Resources" ".\r8_bran_main_pcb_assy.dsn"
+         "R8-REFERENCE-DESIGN")
+      (Path "Outputs")
+      (Select "Design Resources" ".\r8_bran_main_pcb_assy.dsn"
+         "R8-REFERENCE-DESIGN" "06 DISPLAY"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -30 0 200 0 427"))
+      (Tab 0)))
+  (MPSSessionName "t450")
+  (ISPCBBASICLICENSE "false"))
