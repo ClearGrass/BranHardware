@@ -1,0 +1,463 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://D:\Program Files\AD16\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">2016/7/1</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">21:10:38</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc" class="file"><acronym title="D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc">D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">53</td></tr>
+</table>
+</td>
+</table><a name="IDVQKSOL51NCBSB1WERGMNC5HNOE21SBOHE3QYVGGWTWYNBDYUW5H"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDMX0IIFOTZGDMKXI0VVUIESHGYB12421QOPYU52LW1PALB2DSO4UF">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDELOMTFE3NC3TKUKGS2CDYQBVEGZ2S4CZEKHUIXOBWSZAFMYB1YSF">Width Constraint (Min=8mil) (Max=50mil) (Preferred=10mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID4S2SZDNRBSX2IWHOABZOREHR4EMBVCYDQBL544ZKPS3AIEOFCME">Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDGDAIJSZB20GUDEISJBHWBFF2JKMGKODUPUIEUCBANFXVZOZU4SKC">Clearance Constraint (Gap=8mil) (All),(All)</a></td>
+<td class="column2">49</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDT2I5LPHU0BINHFJI1KKQ4KVKEN3O3ZDRQZ2BHSFOCKSW4LQORCRI">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDIPTEABO32AQDFV43CGP5OM0X4IZUWFNBODUVB4FRIQNZA3S3HLLE">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">4</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">53</td>
+</tr>
+</table><br><a name="IDGDAIJSZB20GUDEISJBHWBFF2JKMGKODUPUIEUCBANFXVZOZU4SKC"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Clearance Constraint (Gap=8mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4116.556mil|Location2.Y=4125.806mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4116.556mil|Location2.Y=4125.806mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-36(450mil,-768.976mil) on Top Layer And Pad J5-37(450mil,-788.661mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4136.241mil|Location2.Y=4145.491mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4136.241mil|Location2.Y=4145.491mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-35(450mil,-749.291mil) on Top Layer And Pad J5-36(450mil,-768.976mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4175.611mil|Location2.Y=4184.861mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4175.611mil|Location2.Y=4184.861mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-33(450mil,-709.921mil) on Top Layer And Pad J5-34(450mil,-729.606mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4155.926mil|Location2.Y=4165.176mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4155.926mil|Location2.Y=4165.176mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-35(450mil,-749.291mil) on Top Layer And Pad J5-34(450mil,-729.606mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4195.296mil|Location2.Y=4204.546mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4195.296mil|Location2.Y=4204.546mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-32(450mil,-690.236mil) on Top Layer And Pad J5-33(450mil,-709.921mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4214.981mil|Location2.Y=4224.231mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4214.981mil|Location2.Y=4224.231mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-31(450mil,-670.551mil) on Top Layer And Pad J5-32(450mil,-690.236mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4234.666mil|Location2.Y=4243.916mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4234.666mil|Location2.Y=4243.916mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-30(450mil,-650.866mil) on Top Layer And Pad J5-31(450mil,-670.551mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4274.036mil|Location2.Y=4283.286mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4274.036mil|Location2.Y=4283.286mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-28(450mil,-611.496mil) on Top Layer And Pad J5-29(450mil,-631.181mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4254.351mil|Location2.Y=4263.601mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4254.351mil|Location2.Y=4263.601mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-30(450mil,-650.866mil) on Top Layer And Pad J5-29(450mil,-631.181mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4293.721mil|Location2.Y=4302.971mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4293.721mil|Location2.Y=4302.971mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-27(450mil,-591.811mil) on Top Layer And Pad J5-28(450mil,-611.496mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4313.407mil|Location2.Y=4322.657mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4313.407mil|Location2.Y=4322.657mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-26(450mil,-572.126mil) on Top Layer And Pad J5-27(450mil,-591.811mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4333.092mil|Location2.Y=4342.342mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4333.092mil|Location2.Y=4342.342mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-25(450mil,-552.441mil) on Top Layer And Pad J5-26(450mil,-572.126mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4431.517mil|Location2.Y=4440.767mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4431.517mil|Location2.Y=4440.767mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-20(450mil,-454.016mil) on Top Layer And Pad J5-21(450mil,-473.701mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4392.147mil|Location2.Y=4401.397mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4392.147mil|Location2.Y=4401.397mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-23(450mil,-513.071mil) on Top Layer And Pad J5-22(450mil,-493.386mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4372.462mil|Location2.Y=4381.712mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4372.462mil|Location2.Y=4381.712mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-24(450mil,-532.756mil) on Top Layer And Pad J5-23(450mil,-513.071mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4352.777mil|Location2.Y=4362.027mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4352.777mil|Location2.Y=4362.027mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-24(450mil,-532.756mil) on Top Layer And Pad J5-25(450mil,-552.441mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4529.942mil|Location2.Y=4539.192mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4529.942mil|Location2.Y=4539.192mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-15(450mil,-355.591mil) on Top Layer And Pad J5-16(450mil,-375.276mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4510.257mil|Location2.Y=4519.507mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4510.257mil|Location2.Y=4519.507mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-17(450mil,-394.961mil) on Top Layer And Pad J5-16(450mil,-375.276mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4490.572mil|Location2.Y=4499.822mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4490.572mil|Location2.Y=4499.822mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-18(450mil,-414.646mil) on Top Layer And Pad J5-17(450mil,-394.961mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4470.887mil|Location2.Y=4480.137mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4470.887mil|Location2.Y=4480.137mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-19(450mil,-434.331mil) on Top Layer And Pad J5-18(450mil,-414.646mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4451.202mil|Location2.Y=4460.452mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4451.202mil|Location2.Y=4460.452mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-19(450mil,-434.331mil) on Top Layer And Pad J5-20(450mil,-454.016mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4608.682mil|Location2.Y=4617.932mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4608.682mil|Location2.Y=4617.932mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-12(450mil,-296.535mil) on Top Layer And Pad J5-11(450mil,-276.85mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4628.367mil|Location2.Y=4637.617mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4628.367mil|Location2.Y=4637.617mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-10(450mil,-257.165mil) on Top Layer And Pad J5-11(450mil,-276.85mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4588.997mil|Location2.Y=4598.247mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4588.997mil|Location2.Y=4598.247mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-13(450mil,-316.221mil) on Top Layer And Pad J5-12(450mil,-296.535mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4549.627mil|Location2.Y=4558.877mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4549.627mil|Location2.Y=4558.877mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-14(450mil,-335.906mil) on Top Layer And Pad J5-15(450mil,-355.591mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4707.107mil|Location2.Y=4716.357mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4707.107mil|Location2.Y=4716.357mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-7(450mil,-198.11mil) on Top Layer And Pad J5-6(450mil,-178.425mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4687.422mil|Location2.Y=4696.672mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4687.422mil|Location2.Y=4696.672mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-8(450mil,-217.795mil) on Top Layer And Pad J5-7(450mil,-198.11mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4667.737mil|Location2.Y=4676.987mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4667.737mil|Location2.Y=4676.987mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-9(450mil,-237.48mil) on Top Layer And Pad J5-8(450mil,-217.795mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4648.052mil|Location2.Y=4657.302mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4648.052mil|Location2.Y=4657.302mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-9(450mil,-237.48mil) on Top Layer And Pad J5-10(450mil,-257.165mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4766.162mil|Location2.Y=4775.412mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4766.162mil|Location2.Y=4775.412mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-3(450mil,-119.37mil) on Top Layer And Pad J5-4(450mil,-139.055mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4746.477mil|Location2.Y=4755.727mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4746.477mil|Location2.Y=4755.727mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-5(450mil,-158.74mil) on Top Layer And Pad J5-4(450mil,-139.055mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4785.847mil|Location2.Y=4795.097mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4785.847mil|Location2.Y=4795.097mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-2(450mil,-99.685mil) on Top Layer And Pad J5-3(450mil,-119.37mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1940.375mil|Location2.X=1949.625mil|Location1.Y=4785.8mil|Location2.Y=4795.05mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1940.375mil|Location2.X=1949.625mil|Location1.Y=4785.8mil|Location2.Y=4795.05mil|Absolute=True">Clearance Constraint: (7.78mil &lt; 8mil) Between Track (450mil,-99.685mil)(544.685mil,-99.685mil) on Top Layer And Pad J5-3(450mil,-119.37mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4805.533mil|Location2.Y=4814.783mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1924.627mil|Location2.X=1933.877mil|Location1.Y=4805.533mil|Location2.Y=4814.783mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J5-1(450mil,-80mil) on Top Layer And Pad J5-2(450mil,-99.685mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1940.375mil|Location2.X=1949.625mil|Location1.Y=4805.58mil|Location2.Y=4814.83mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1940.375mil|Location2.X=1949.625mil|Location1.Y=4805.58mil|Location2.Y=4814.83mil|Absolute=True">Clearance Constraint: (7.779mil &lt; 8mil) Between Track (450mil,-99.685mil)(544.685mil,-99.685mil) on Top Layer And Pad J5-1(450mil,-80mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4652.777mil|Location2.X=4662.027mil|Location1.Y=4757.58mil|Location2.Y=4766.83mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4652.777mil|Location2.X=4662.027mil|Location1.Y=4757.58mil|Location2.Y=4766.83mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J6-2(3176.181mil,-147.638mil) on Top Layer And Pad J6-3(3176.181mil,-127.953mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4652.777mil|Location2.X=4662.027mil|Location1.Y=4777.265mil|Location2.Y=4786.515mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4652.777mil|Location2.X=4662.027mil|Location1.Y=4777.265mil|Location2.Y=4786.515mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J6-4(3176.181mil,-108.268mil) on Top Layer And Pad J6-3(3176.181mil,-127.953mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4652.777mil|Location2.X=4662.027mil|Location1.Y=4796.95mil|Location2.Y=4806.2mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4652.777mil|Location2.X=4662.027mil|Location1.Y=4796.95mil|Location2.Y=4806.2mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J6-5(3176.181mil,-88.583mil) on Top Layer And Pad J6-4(3176.181mil,-108.268mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4652.777mil|Location2.X=4662.027mil|Location1.Y=4816.635mil|Location2.Y=4825.885mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4652.777mil|Location2.X=4662.027mil|Location1.Y=4816.635mil|Location2.Y=4825.885mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J6-6(3176.181mil,-68.898mil) on Top Layer And Pad J6-5(3176.181mil,-88.583mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4652.777mil|Location2.X=4662.027mil|Location1.Y=4737.895mil|Location2.Y=4747.145mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4652.777mil|Location2.X=4662.027mil|Location1.Y=4737.895mil|Location2.Y=4747.145mil|Absolute=True">Clearance Constraint: (7.874mil &lt; 8mil) Between Pad J6-1(3176.181mil,-167.323mil) on Top Layer And Pad J6-2(3176.181mil,-147.638mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.979mil|Location2.X=3478.229mil|Location1.Y=3250.218mil|Location2.Y=3259.468mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.979mil|Location2.X=3478.229mil|Location1.Y=3250.218mil|Location2.Y=3259.468mil|Absolute=True">Clearance Constraint: (1.772mil &lt; 8mil) Between Region (0 hole(s)) Top Layer And Pad U3-2(1973.092mil,-1653.917mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3464.925mil|Location2.X=3471.259mil|Location1.Y=3262.404mil|Location2.Y=3268.738mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3464.925mil|Location2.X=3471.259mil|Location1.Y=3262.404mil|Location2.Y=3268.738mil|Absolute=True">Clearance Constraint: (Collision &lt; 8mil) Between Region (0 hole(s)) Top Layer And Pad U3-2(1973.092mil,-1626.358mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3853.131mil|Location2.X=3862.381mil|Location1.Y=3264.273mil|Location2.Y=3273.523mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3853.131mil|Location2.X=3862.381mil|Location1.Y=3264.273mil|Location2.Y=3273.523mil|Absolute=True">Clearance Constraint: (5.118mil &lt; 8mil) Between Pad U6-7(2385mil,-1600mil) on Top Layer And Pad U6-6(2349.961mil,-1625.591mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3853.131mil|Location2.X=3862.381mil|Location1.Y=3289.863mil|Location2.Y=3299.113mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3853.131mil|Location2.X=3862.381mil|Location1.Y=3289.863mil|Location2.Y=3299.113mil|Absolute=True">Clearance Constraint: (5.118mil &lt; 8mil) Between Pad U6-7(2385mil,-1600mil) on Top Layer And Pad U6-5(2349.961mil,-1600mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3853.131mil|Location2.X=3862.381mil|Location1.Y=3315.454mil|Location2.Y=3324.704mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3853.131mil|Location2.X=3862.381mil|Location1.Y=3315.454mil|Location2.Y=3324.704mil|Absolute=True">Clearance Constraint: (5.118mil &lt; 8mil) Between Pad U6-7(2385mil,-1600mil) on Top Layer And Pad U6-4(2349.961mil,-1574.409mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3897.619mil|Location2.X=3906.869mil|Location1.Y=3315.454mil|Location2.Y=3324.704mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3897.619mil|Location2.X=3906.869mil|Location1.Y=3315.454mil|Location2.Y=3324.704mil|Absolute=True">Clearance Constraint: (5.118mil &lt; 8mil) Between Pad U6-7(2385mil,-1600mil) on Top Layer And Pad U6-3(2420.039mil,-1574.409mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3897.619mil|Location2.X=3906.869mil|Location1.Y=3264.273mil|Location2.Y=3273.523mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3897.619mil|Location2.X=3906.869mil|Location1.Y=3264.273mil|Location2.Y=3273.523mil|Absolute=True">Clearance Constraint: (5.118mil &lt; 8mil) Between Pad U6-7(2385mil,-1600mil) on Top Layer And Pad U6-1(2420.039mil,-1625.591mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3464.925mil|Location2.X=3471.259mil|Location1.Y=3262.404mil|Location2.Y=3268.738mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3464.925mil|Location2.X=3471.259mil|Location1.Y=3262.404mil|Location2.Y=3268.738mil|Absolute=True">Clearance Constraint: (Collision &lt; 8mil) Between Region (0 hole(s)) Top Layer And Track (1973.092mil,-1653.917mil)(1973.092mil,-1626.358mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3463.467mil|Location2.X=3472.717mil|Location1.Y=3249.281mil|Location2.Y=3258.531mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3463.467mil|Location2.X=3472.717mil|Location1.Y=3249.281mil|Location2.Y=3258.531mil|Absolute=True">Clearance Constraint: (3.646mil &lt; 8mil) Between Region (0 hole(s)) Top Layer And Track (1973.092mil,-1673.548mil)(1973.092mil,-1653.917mil) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDIPTEABO32AQDFV43CGP5OM0X4IZUWFNBODUVB4FRIQNZA3S3HLLE"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Short-Circuit Constraint (Allowed=No) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3458.454mil|Location2.X=3477.73mil|Location1.Y=3237.429mil|Location2.Y=3256.705mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3458.454mil|Location2.X=3477.73mil|Location1.Y=3237.429mil|Location2.Y=3256.705mil|Absolute=True">Short-Circuit Constraint: Between Region (0 hole(s)) Top Layer And Pad U3-2(1973.092mil,-1653.917mil) on Top Layer Location : [X = 3468.092mil][Y = 3247.067mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3452.553mil|Location2.X=3483.631mil|Location1.Y=3258.102mil|Location2.Y=3289.181mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3452.553mil|Location2.X=3483.631mil|Location1.Y=3258.102mil|Location2.Y=3289.181mil|Absolute=True">Short-Circuit Constraint: Between Region (0 hole(s)) Top Layer And Pad U3-2(1973.092mil,-1626.358mil) on Top Layer Location : [X = 3468.092mil][Y = 3273.642mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3445.877mil|Location2.X=3490.307mil|Location1.Y=3237.753mil|Location2.Y=3282.183mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3445.877mil|Location2.X=3490.307mil|Location1.Y=3237.753mil|Location2.Y=3282.183mil|Absolute=True">Short-Circuit Constraint: Between Region (0 hole(s)) Top Layer And Track (1973.092mil,-1653.917mil)(1973.092mil,-1626.358mil) on Top Layer Location : [X = 3468.092mil][Y = 3259.968mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=D:\%E9%9D%92%E8%90%8D%E7%A7%91%E6%8A%80\Bran\%E7%A1%AC%E4%BB%B6%E9%83%A8%E5%88%86\%E7%94%B5%E5%AD%90\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3459.183mil|Location2.X=3477.001mil|Location1.Y=3237.28mil|Location2.Y=3255.098mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=D:\青萍科技\Bran\硬件部分\电子\BranHardware\Debug-Pinboard\pin board.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3459.183mil|Location2.X=3477.001mil|Location1.Y=3237.28mil|Location2.Y=3255.098mil|Absolute=True">Short-Circuit Constraint: Between Region (0 hole(s)) Top Layer And Track (1973.092mil,-1673.548mil)(1973.092mil,-1653.917mil) on Top Layer Location : [X = 3468.092mil][Y = 3246.189mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

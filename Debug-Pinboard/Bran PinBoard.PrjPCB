@@ -70,7 +70,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=GKOPNJII
+DocumentUniqueId=GRLDNSUH
 
 [Document3]
 DocumentPath=Bran.PcbLib
@@ -104,7 +104,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=LLAHSYQX
 
 [Document5]
 DocumentPath=pin board.PcbDoc
@@ -121,7 +121,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=LUYLTUWK
+DocumentUniqueId=MFKJENTL
 
 [GeneratedDocument1]
 DocumentPath=Project Outputs for Bran PinBoard\Design Rule Check - pin board.html
