@@ -1,11 +1,12 @@
-Output: Generates pick and place files
-Type  : Pick Place
-From  : Variant [[No Variations]] of Project [Bran_Main_Assya_PCB_v1.PrjPCB]
-   Generated File[Pick Place for Bran_Main_Assay_PCB_v1.txt]
-   Generated File[Pick Place for Bran_Main_Assay_PCB_v1.csv]
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [Bran_Main_Assya_PCB_v1.PrjPCB]
+   Generated File[Bran_Main_Assay_PCB_v1.TXT]
+   Generated File[Bran_Main_Assay_PCB_v1.LDP]
+   Generated File[Bran_Main_Assay_PCB_v1.DRR]
 
 
-Files Generated   : 2
+Files Generated   : 3
 Documents Printed : 0
 
-Finished Output Generation At 12:19:09 On 2016/6/27
+Finished Output Generation At 10:04:16 On 2016/8/3
