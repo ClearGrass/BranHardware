@@ -1,1 +1,0 @@
-DEBUG LIST为HardWare记录调试信息的文件夹；

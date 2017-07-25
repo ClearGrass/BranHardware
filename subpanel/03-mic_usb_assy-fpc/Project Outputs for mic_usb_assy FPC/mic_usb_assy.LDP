@@ -1,3 +1,0 @@
-Layer Pairs Export File for PCB: D:\青萍科技\Bran\硬件部分\电子\V2 设计文件\03 mic_usb_assy FPC(03 USB)\mic_usb_assy.PcbDoc
-LayersSetName=Top_Bot_Thru_Holes|DrillFile=mic_usb_assy-roundholes.txt|LayerPairs=gtl,gbl
-LayersSetName=Top_Bot_Slot_Holes|DrillFile=mic_usb_assy-slotholes.txt|LayerPairs=gtl,gbl

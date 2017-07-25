@@ -1,1 +1,0 @@
-增加06 base_poewr_assy_pcb

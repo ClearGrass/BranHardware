@@ -1,1 +1,0 @@
-南亚 2Gbit NT5CC128M16GP-DII
