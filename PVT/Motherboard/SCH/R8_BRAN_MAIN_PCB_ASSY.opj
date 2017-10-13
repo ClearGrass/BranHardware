@@ -100,7 +100,29 @@
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -31 0 200 0 427"))
-      (Tab 0)))
-  (MPSSessionName "t450")
+        (Placement "44 0 1 -1 -1 -13 -58 0 262 0 427"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -13 -58 49 2303 49 690")
+        (Scroll "-493 0")
+        (Zoom "123")
+        (Occurrence "/"))
+      (Path
+         "D:\MYGIT\BRANHARDWARE\PVT\MOTHERBOARD\SCH\R8_BRAN_MAIN_PCB_ASSY.DSN")
+      (Schematic "R8-REFERENCE-DESIGN")
+      (Page "08 Sensor"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -13 -58 98 2401 98 682")
+        (Scroll "0 102")
+        (Zoom "200")
+        (Occurrence "/"))
+      (Path
+         "D:\MYGIT\BRANHARDWARE\PVT\MOTHERBOARD\SCH\R8_BRAN_MAIN_PCB_ASSY.DSN")
+      (Schematic "R8-REFERENCE-DESIGN")
+      (Page "11 Temp Sensor")))
+  (MPSSessionName "T460P")
   (ISPCBBASICLICENSE "false"))

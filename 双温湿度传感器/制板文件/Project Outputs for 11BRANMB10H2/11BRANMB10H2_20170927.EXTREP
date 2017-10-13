@@ -1,0 +1,26 @@
+------------------------------------------------------------------------------------------
+Gerber File Extension Report For: 11BRANMB10H2_20170927.GBR   2017/9/27  11:20:04
+------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------
+Layer Extension     Layer Description                      
+------------------------------------------------------------------------------------------
+.GTL                TOP                                     
+.G1                 GND1                                    
+.G2                 Singal                                  
+.G3                 POWER                                   
+.G4                 GND2                                    
+.GBL                BOTTOM                                  
+.GPB                Bottom Pad Master                       
+.GPT                Top Pad Master                          
+.GTO                Silkscreen Top                          
+.GTP                Paste Mask Top                          
+.GTS                Solder Mask Top                         
+.GBS                Solder Mask Bottom                      
+.GBP                Paste Mask Bottom                       
+.GBO                Silkscreen Bottom                       
+.GKO                Keep-Out Layer                          
+.GD1                Drill Drawing                           
+.GG1                Drill Guide                             
+------------------------------------------------------------------------------------------
