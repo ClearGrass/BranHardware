@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [Temp Sensirion assy FPC.PrjPCB]
+   Generated File[Temp Sensirion assy FPC_20171028.TXT]
+   Generated File[Temp Sensirion assy FPC_20171028.LDP]
+   Generated File[Temp Sensirion assy FPC_20171028.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 10:06:55 On 2017/10/28

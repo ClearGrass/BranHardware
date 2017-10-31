@@ -1,0 +1,24 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: 11BRANMB10H3_20171027.pcbdoc   2017/10/28  9:37:16
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : TOP to BOTTOM
+ASCII RoundHoles File : 11BRANMB10H3_20171027.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      2mil (0.051mm)                                            Round             2         PTH        0.02inch (0.61mm)
+T2      8mil (0.2mm)                                              Round             9         PTH        0.39inch (9.90mm)
+T3      8mil (0.203mm)                                            Round             429       PTH        35.14inch (892.46mm)
+T4      10mil (0.254mm)                                           Round             257       PTH        19.17inch (487.00mm)
+T5      12mil (0.305mm)                                           Round             186       PTH        21.91inch (556.60mm)
+T6      13mil (0.33mm)                                            Round             11        PTH        1.94inch (49.21mm)
+T7      18mil (0.457mm)                                           Round             69        PTH        16.28inch (413.49mm)
+T8      35mil (0.9mm)                                             Round             3         PTH        0.20inch (5.00mm)
+T9      71mil (1.8mm)                                             Round             4         PTH        4.78inch (121.40mm)
+T10     79mil (2mm)                                               Round             1         PTH        0.00inch (0.00mm)
+T11     90mil (2.286mm)                                           Round             1         PTH        0.00inch (0.00mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              972
+
+Total Processing Time (hh:mm:ss) : 00:00:01

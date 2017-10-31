@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [11BRANMB10H3.PrjPCB]
+   Generated File[11BRANMB10H3_20171027.TXT]
+   Generated File[11BRANMB10H3_20171027.LDP]
+   Generated File[11BRANMB10H3_20171027.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 9:37:17 On 2017/10/28
