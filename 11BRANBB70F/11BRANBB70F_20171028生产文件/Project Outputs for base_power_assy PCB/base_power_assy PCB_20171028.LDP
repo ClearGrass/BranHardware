@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: D:\myProject\base_power_assy PCB_20171028.PcbDoc
+LayersSetName=Top_Bot_Thru_Holes|DrillFile=base_power_assy pcb_20171028-roundholes.txt|DrillLayers=gtl,gbl
+LayersSetName=Top_Bot_Slot_Holes|DrillFile=base_power_assy pcb_20171028-slotholes.txt|DrillLayers=gtl,gbl

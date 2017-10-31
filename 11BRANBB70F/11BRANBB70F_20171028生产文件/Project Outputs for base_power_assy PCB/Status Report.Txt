@@ -1,0 +1,13 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [Free Documents]
+   Generated File[base_power_assy PCB_20171028-RoundHoles.TXT]
+   Generated File[base_power_assy PCB_20171028-SlotHoles.TXT]
+   Generated File[base_power_assy PCB_20171028.LDP]
+   Generated File[base_power_assy PCB_20171028.DRR]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 13:45:11 On 2017/10/28
